@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35919.96
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Editor_Window", "Editor_Window\Editor_Window.vcxproj", "{39115468-1648-451C-AACE-D575501130DA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "YamdoEngine_Window", "yandoEngine_Window\yandoEngine_Window.vcxproj", "{4C4B6941-0543-412D-87A6-2D7B6CC1F26B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "YamYamEngine_SOURCE", "YamYamEngine_SOURCE\YamYamEngine_SOURCE.vcxitems", "{A9AC7EB9-F6F9-4DB8-A0AE-EC3AD3F3AB56}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39115468-1648-451C-AACE-D575501130DA}.Debug|x64.ActiveCfg = Debug|x64
+		{39115468-1648-451C-AACE-D575501130DA}.Debug|x64.Build.0 = Debug|x64
+		{39115468-1648-451C-AACE-D575501130DA}.Debug|x86.ActiveCfg = Debug|Win32
+		{39115468-1648-451C-AACE-D575501130DA}.Debug|x86.Build.0 = Debug|Win32
+		{39115468-1648-451C-AACE-D575501130DA}.Release|x64.ActiveCfg = Release|x64
+		{39115468-1648-451C-AACE-D575501130DA}.Release|x64.Build.0 = Release|x64
+		{39115468-1648-451C-AACE-D575501130DA}.Release|x86.ActiveCfg = Release|Win32
+		{39115468-1648-451C-AACE-D575501130DA}.Release|x86.Build.0 = Release|Win32
+		{4C4B6941-0543-412D-87A6-2D7B6CC1F26B}.Debug|x64.ActiveCfg = Debug|x64
+		{4C4B6941-0543-412D-87A6-2D7B6CC1F26B}.Debug|x64.Build.0 = Debug|x64
+		{4C4B6941-0543-412D-87A6-2D7B6CC1F26B}.Debug|x86.ActiveCfg = Debug|Win32
+		{4C4B6941-0543-412D-87A6-2D7B6CC1F26B}.Debug|x86.Build.0 = Debug|Win32
+		{4C4B6941-0543-412D-87A6-2D7B6CC1F26B}.Release|x64.ActiveCfg = Release|x64
+		{4C4B6941-0543-412D-87A6-2D7B6CC1F26B}.Release|x64.Build.0 = Release|x64
+		{4C4B6941-0543-412D-87A6-2D7B6CC1F26B}.Release|x86.ActiveCfg = Release|Win32
+		{4C4B6941-0543-412D-87A6-2D7B6CC1F26B}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B150D63-1BB0-48FC-BA7B-698156CCA3F7}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		YamYamEngine_SOURCE\YamYamEngine_SOURCE.vcxitems*{4c4b6941-0543-412d-87a6-2d7b6cc1f26b}*SharedItemsImports = 4
+		YamYamEngine_SOURCE\YamYamEngine_SOURCE.vcxitems*{a9ac7eb9-f6f9-4db8-a0ae-ec3ad3f3ab56}*SharedItemsImports = 9
+	EndGlobalSection
+EndGlobal
