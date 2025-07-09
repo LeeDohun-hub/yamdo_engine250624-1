@@ -71,15 +71,11 @@ namespace ya {
        catAnimator->PlayAnimation(L"SitDown", false);  
 
        Transform* tr = GetOwner()->GetComponent<Transform>();  
-       cat->GetComponent<Transform>()->SetPosition(tr->GetPosition()); // Fix: Use GetPosition() instead of SetPosition()  
+       cat->GetComponent<Transform>()->SetPosition(tr->GetPosition() + Vector2(100.0f, 0.0f)); // Fix: Use GetPosition() instead of SetPosition()  
        cat->GetComponent<Transform>()->SetScale(Vector2(2.0f, 2.0f));  
 
-	   Vector2 mousePos = Vector2::Zero;
-	   //pos.x -= 100.0f * Time::DeltaTime();
-	   if (Input::GetKeyDown(eKeyCode::LButton))
-	   {
-		   mousePos = Input::GetMousePosition();
-	   }
+	   Vector2 mousePos = Input::GetMousePosition();
+	   catSrc->mDest = mousePos;
     }
 	void PlayerScript::idle()
 	{

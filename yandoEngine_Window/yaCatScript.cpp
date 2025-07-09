@@ -7,7 +7,7 @@
 #include "time.h"
 #include "yaObject.h"
 namespace ya {
-	CatScript::CatScript() : mState(CatScript::eState::SitDown), mAnimator(nullptr), mTime(0.0f), mDeathTime(0.0f), mDest(Vector2::Zero)
+	CatScript::CatScript() : mState(CatScript::eState::SitDown), mAnimator(nullptr), mTime(0.0f), mDeathTime(0.0f), mDest(Vector2::Zero), mRadian(0.0f)
 	{
 	}
 	CatScript::~CatScript() {}
@@ -52,19 +52,26 @@ namespace ya {
 	{
 		mTime += Time::DeltaTime();
 
+		if (mTime > 2.0f)
+		{
+			object::Destroy(GetOwner());
+		}
 		Transform* tr = GetOwner()->GetComponent<Transform>();
 		Vector2 pos = tr->GetPosition();
-		Vector2 mousePos = Vector2::Zero;
-		//pos.x -= 100.0f * Time::DeltaTime();
-		if (Input::GetKeyDown(eKeyCode::LButton))
-		{
-			 mousePos = Input::GetMousePosition();
-		}
-		Transform* plTr = mPlayer->GetComponent<Transform>();
-		Vector2 dest = mousePos - plTr->GetPosition();
+		//Vector2 mousePos = Input::GetMousePosition();
+	
+		// 마우스 위치 이동 (벡터의 뺄셈 활용)
+		//Transform* plTr = mPlayer->GetComponent<Transform>();
+		
+		//Vector2 dest = mDest - plTr->GetPosition() + Vector(100.f, 0.0f));
 
-		pos += dest.normalize() * (100.0f * Time::DeltaTime());
-		//pos = ( pos * 100.0f * Time::DeltaTime());
+		//pos += dest.normalize() * (100.0f * Time::DeltaTime());
+		//pos += Vector2(50.0f, 0.0f)
+
+		// 삼각함수를 통한 이동
+		//mRadian += Time::DeltaTime();
+		//pos += Vector2(1.0f, cosf(mRadian)) * (100.0f * Time::DeltaTime());
+
 		tr->SetPosition(pos);
 
 		/*if (mTime > 3.0f)

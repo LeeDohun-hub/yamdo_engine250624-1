@@ -7,7 +7,7 @@ public:
   template <typename T> 
   static Scene *CreateScene(const std::wstring &name) 
   {
-    T *scene = new T();
+    T* scene = new T();
     scene->SetName(name);
     mActiveScene = scene;
     scene->Initialize();
